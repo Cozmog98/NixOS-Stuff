@@ -1,0 +1,24 @@
+font=Terminus 12
+
+background-color=#000000FF
+text-color=#FFFFFFFF
+
+border-color=#FFFFFFFF
+border-size=2
+border-radius=0
+
+padding=10
+margin=12
+
+default-timeout=5000
+max-visible=5
+
+anchor=top-right
+layer=overlay
+
+icons=0
+markup=1
+
+width=350
+
+sort=-time
