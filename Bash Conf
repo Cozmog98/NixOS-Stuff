@@ -1,0 +1,16 @@
+fastfetch
+
+alias swayconf='nvim ~/.config/sway/config'
+alias footconf='nvim ~/.config/foot/foot.ini'
+alias waybarconf='nvim ~/.config/waybar/config'
+alias waybarstyle='nvim ~/.config/waybar/style.css'
+alias roficonf='nvim ~/.config/rofi/config.rasi'
+alias thunarconf='nvim ~/.config/Thunar/uca.xml'
+alias yaziconf='nvim ~/.config/yazi/yazi.toml'
+alias nvimconf='nvim ~/.config/nvim/init.lua'
+alias waypaperconf='nvim ~/.config/waypaper/config.ini'
+alias fastfetchconf='nvim ~/.config/fastfetch/config.jsonc'
+alias makoconf='nvim ~/.config/mako/config'
+alias nixosconf='sudo nvim /etc/nixos/configuration.nix'
+alias bashconf='nvim ~/.bashrc'
+alias nixosrebuild='sudo nixos-rebuild switch'
