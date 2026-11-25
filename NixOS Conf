@@ -1,0 +1,125 @@
+
+  # Nations I think
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "en_US.UTF-8";
+    LC_IDENTIFICATION = "en_US.UTF-8";
+    LC_MEASUREMENT = "en_US.UTF-8";
+    LC_MONETARY = "en_US.UTF-8";
+    LC_NAME = "en_US.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_PAPER = "en_US.UTF-8";
+    LC_TELEPHONE = "en_US.UTF-8";
+    LC_TIME = "en_US.UTF-8";
+  };
+
+  # Keymap
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
+
+  # I DON'T WANT YOU AS MY WIFIIIIII
+  users.users."coz" = {
+    isNormalUser = true;
+    description = "Coz";
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [];
+  };
+
+  
+  nixpkgs.config.allowUnfree = true;
+
+  environment.systemPackages = with pkgs; [
+ 	waybar
+	kitty
+	rofi
+	mako
+	grim
+	slurp
+	wl-clipboard
+	swaybg
+	swaylock
+	swayidle
+	thunar
+	thunar-volman
+	networkmanagerapplet
+	blueman
+	pavucontrol
+	playerctl
+	libnotify
+	file
+	unzip
+	zip
+	tumbler
+	neovim
+	fastfetch
+	git
+	xdg-utils
+	spotify
+	spotify-player
+	kew
+	btop
+	wireplumber
+	curl
+	cava
+	firefox
+	foot
+	hyprpicker
+	vesktop
+	brightnessctl
+	obs-studio
+	sway-contrib.grimshot
+	cava
+	mangowc
+	timeshift
+	xdg-desktop-portal-wlr
+	cmatrix
+	htop
+	pipes-rs
+	lavat
+	tmux
+  ];
+ 
+ fonts.fontconfig.enable = true;
+
+     # Fonts And stuff...
+    fonts.packages = with pkgs; [
+	noto-fonts
+	terminus_font
+	noto-fonts-cjk-sans
+	noto-fonts-color-emoji
+	nerd-fonts.jetbrains-mono
+	
+	];
+ # Services
+ services.openssh.enable = true;
+ services.samba.enable = true;
+ services.tailscale.enable = true;
+ programs.appimage.binfmt = true;
+ programs.mangowc.enable = true;
+ programs.nh.enable = true;
+
+ # Audio
+ security.rtkit.enable = true;
+ services.pipewire = {
+ enable = true;
+ alsa.enable = true;
+ alsa.support32Bit = true; 
+ pulse.enable = true;
+ jack.enable = true;
+ wireplumber.enable = true;
+ };
+
+
+
+ # Im not really sure what this does i was just told to do it
+ programs.sway = {
+	enable = true;
+	wrapperFeatures.gtk = true;
+};
+
+  system.stateVersion = "26.05"; # Did you read the comment?
+
+}
